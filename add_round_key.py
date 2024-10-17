@@ -23,3 +23,4 @@ def matrix2bytes(matrix):
     return bytes([byte for row in matrix for byte in row])
 
 print(matrix2bytes(add_round_key(state, round_key)))
+# Output: b'crypto{r0undk3y}'
