@@ -9,6 +9,5 @@ matrix = [
     [114, 105, 120, 125],
 ]
 
-
 print(matrix2bytes(matrix))
-# Output: b'crypto{inmatrx}'
+# Output: b'crypto{r0undk3y}'
