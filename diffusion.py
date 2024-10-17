@@ -5,7 +5,9 @@ def shift_rows(s):
 
 
 def inv_shift_rows(s):
-    ???
+    s[0][1], s[1][1], s[2][1], s[3][1] = s[3][1], s[0][1], s[1][1], s[2][1]
+    s[0][2], s[1][2], s[2][2], s[3][2] = s[2][2], s[3][2], s[0][2], s[1][2]
+    s[0][3], s[1][3], s[2][3], s[3][3] = s[1][3], s[2][3], s[3][3], s[0][3]
 
 
 # learned from http://cs.ucsb.edu/~koc/cs178/projects/JT/aes.c
@@ -46,4 +48,11 @@ state = [
     [42, 184, 92, 209],
     [94, 79, 8, 54],
 ]
+
+inv_mix_columns(state)
+inv_shift_rows(state)
+
+flag = bytes([state[i][j] for i in range(4) for j in range(4)])
+print(flag.decode())
+# Output: crypto{d1ffUs3R}
 
