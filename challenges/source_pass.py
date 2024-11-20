@@ -14,7 +14,7 @@ def decrypt(ciphertext, password_hash):
 
     return decrypted
 
-with open("words.txt") as f:
+with open(r"C:\Users\Lenovo\PycharmProjects\Symmetric Cryptography\challenges\words.txt") as f:
     words = [w.strip() for w in f.readlines()]
 keyword = random.choice(words)
 
